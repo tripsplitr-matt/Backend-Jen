@@ -1,0 +1,29 @@
+{
+  "name": "Backend-Jen",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "helmet": "^3.18.0",
+    "knex": "^0.16.5",
+    "nodemon": "^1.19.1",
+    "sqlite": "^3.0.3",
+    "sqlite3": "^4.0.8"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tripsplitr-matt/Backend-Jen.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tripsplitr-matt/Backend-Jen/issues"
+  },
+  "homepage": "https://github.com/tripsplitr-matt/Backend-Jen#readme"
+}
