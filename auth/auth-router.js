@@ -6,7 +6,9 @@ const jwt = require('jsonwebtoken');
 
 const secrets = require('./secrets');
 
+
 const Users = require('../users/usersModel.js');
+
 
 // for endpoints beginning with /api/auth
 router.post('/register', (req, res) => {

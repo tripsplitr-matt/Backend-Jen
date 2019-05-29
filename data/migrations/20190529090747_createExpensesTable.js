@@ -10,6 +10,7 @@ exports.up = function(knex, Promise) {
 
     tbl.integer("participants");
 
+    // needs to pull in an array
     tbl.string("participant_names");
 
     tbl.timestamps(true, true);
