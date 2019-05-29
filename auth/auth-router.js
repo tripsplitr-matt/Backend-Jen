@@ -1,6 +1,7 @@
 const router = require('express').Router();
 const bcrypt = require('bcryptjs');
 
+//require web token
 const jwt = require('jsonwebtoken');
 
 const secrets = require('./secrets');
