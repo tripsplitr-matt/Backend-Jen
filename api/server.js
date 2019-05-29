@@ -1,4 +1,6 @@
 const express = require('express');
+const cors = require('cors');
+
 
 const configureMiddleware = require('./middleware');
 const usersRouter = require('../users/usersRouter');
@@ -10,6 +12,8 @@ configureMiddleware(server);
 
 server.use('/api/users', usersRouter);
 server.use('/api/auth', authRouter);
+server.use(cors());
+server.use(express.json());
 
 server.get('/', (req, res) => {
   res.send('TripSplitr')
