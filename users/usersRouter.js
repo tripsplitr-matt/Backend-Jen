@@ -2,7 +2,7 @@ const router = require('express').Router();
 const Users = require ('./usersModel');
 // const restricted = require('../auth/restricted-middleware');
 
-router.get('/users', (req, res) => {
+router.get('/', (req, res) => {
   Users.find()
     .then(users => {
       console.log('users');
@@ -10,6 +10,5 @@ router.get('/users', (req, res) => {
     })
     .catch(err => res.send(err));
 });
-
 
 module.exports = router;

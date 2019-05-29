@@ -1,10 +1,10 @@
 const router = require('express').Router();
 const Trips = require('./tripsModel');
 
-router.get('/trips', (req, res) => {
+router.get('/', (req, res) => {
   Trips.find() 
     .then(trips => {
-      res.json(trips);
+      res.status(200).json(trips);
     })
     .catch(err => res.send(err));
 });

@@ -4,14 +4,16 @@ const cors = require('cors');
 
 const configureMiddleware = require('./middleware');
 const usersRouter = require('../users/usersRouter');
+const tripsRouter = require('../trips/tripsRouter');
 const authRouter = require('../auth/auth-router');
 
 const server = express();
 
 configureMiddleware(server);
 
-server.use('/api/users', usersRouter);
-server.use('/api/auth', authRouter);
+server.use('/users', usersRouter);
+server.use('/auth', authRouter);
+server.use('/trips', tripsRouter);
 server.use(cors());
 server.use(express.json());
 
