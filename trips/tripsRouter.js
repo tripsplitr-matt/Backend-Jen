@@ -9,4 +9,22 @@ router.get('/', (req, res) => {
     .catch(err => res.send(err));
 });
 
+router.get('/:id', async (req, res) => {
+  try {
+    const trip = await Trips.findById(req.params.id);
+
+    if (trip) {
+      res.status(200).json(trip);
+    } else {
+      res.status(404).json({ message: 'Trip not found' });
+    }
+  } catch (error) {
+    // log error to database
+    console.log(error);
+    res.status(500).json({
+      message: 'Error retrieving your trip',
+    });
+  }
+});
+
 module.exports = router;
