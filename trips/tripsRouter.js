@@ -1,6 +1,7 @@
 const router = require('express').Router();
 const Trips = require('./tripsModel');
 
+// retrieve full list of trips
 router.get('/', (req, res) => {
   Trips.find() 
     .then(trips => {
@@ -9,6 +10,7 @@ router.get('/', (req, res) => {
     .catch(err => res.send(err));
 });
 
+// retrieve specific trip by id #
 router.get('/:id', async (req, res) => {
   try {
     const trip = await Trips.findById(req.params.id);
