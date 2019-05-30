@@ -10,7 +10,7 @@ exports.up = function(knex, Promise) {
 
     tbl.string("email", 128).notNullable();
 
-    tbl.string("avatar", 128);
+    tbl.string("img", 128);
 
     tbl.timestamps(true, true);
 
