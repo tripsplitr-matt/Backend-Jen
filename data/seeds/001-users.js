@@ -7,89 +7,89 @@ exports.seed = function(knex, Promise) {
           name: "Mario",
           username: "mario1",
           password: "pass",
-          email: "savepeach@gmail.com",
+          email: "test@gmail.com",
         },
         {
           name: "Luigi",
           username: "luigi1",
           password: "pass",
-          email: "letsahgo@gmail.com"
+          email: "test@gmail.com"
         },
         {
           name: "Bowser",
           username: "badguy",
           password: "pass",
-          email: "bwahaha@gmail.com"
+          email: "test@gmail.com"
         },
         {
           name: "Peach",
           username: "princess",
           password: "pass",
-          email: "peachy@gmail.com"
+          email: "test@gmail.com"
         },
         {
           name: "Joe",
-          username: "badguy",
+          username: "traveler",
           password: "pass",
           email: "test@gmail.com"
         },
         {
           name: "Matt",
-          username: "badguy",
+          username: "traveler",
           password: "pass",
           email: "test@gmail.com"
         },
         {
           name: "David",
-          username: "badguy",
+          username: "traveler",
           password: "pass",
           email: "test@gmail.com"
         },
         {
           name: "Jon",
-          username: "badguy",
+          username: "traveler",
           password: "pass",
           email: "test@gmail.com"
         },
         {
           name: "Ryan",
-          username: "badguy",
+          username: "traveler",
           password: "pass",
           email: "test@gmail.com"
         },
         {
           name: "Jen",
-          username: "badguy",
+          username: "traveler",
           password: "pass",
           email: "test@gmail.com"
         },
         {
           name: "Jack",
-          username: "badguy",
+          username: "traveler",
           password: "pass",
           email: "test@gmail.com"
         },
         {
           name: "Jill",
-          username: "badguy",
+          username: "traveler",
           password: "pass",
           email: "test@gmail.com"
         },
         {
           name: "Mike",
-          username: "badguy",
+          username: "traveler",
           password: "pass",
           email: "test@gmail.com"
         },
         {
           name: "Katie",
-          username: "badguy",
+          username: "traveler",
           password: "pass",
           email: "test@gmail.com"
         },
         {
           name: "Bill",
-          username: "badguy",
+          username: "traveler",
           password: "pass",
           email: "test@gmail.com"
         }

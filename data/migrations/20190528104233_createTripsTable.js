@@ -4,7 +4,7 @@ exports.up = function(knex, Promise) {
 
     tbl.string("name", 128).notNullable();
 
-    // dd/mm/yyyy
+    // Format for date: dd/mm/yyyy
     tbl.date("date").notNullable();
 
     tbl.integer("base_cost");
