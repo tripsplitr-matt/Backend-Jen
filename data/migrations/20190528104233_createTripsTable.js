@@ -4,11 +4,14 @@ exports.up = function(knex, Promise) {
 
     tbl.string("name", 128).notNullable();
 
+    // dd/mm/yyyy
     tbl.date("date").notNullable();
 
     tbl.integer("base_cost");
 
     tbl.boolean("complete");
+
+    tbl.string("img", 128)
 
     tbl
       .integer("user_id")

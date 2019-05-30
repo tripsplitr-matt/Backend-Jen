@@ -2,16 +2,23 @@ exports.up = function(knex, Promise) {
   return knex.schema.createTable("expenses", tbl => {
     tbl.increments();
 
-    tbl.string("trip_name").notNullable();
+    tbl.string("expense_name", 128).notNullable();
 
-    tbl.string("total_trip_price");
+    tbl.integer("total_expense_price");
 
-    tbl.string("primary_paid");
+    // person creating expense
+    tbl.string("primary_paid", 128);
 
-    tbl.integer("participants");
+    // bring in array of people who paid for the trip
 
-    // needs to pull in an array
-    tbl.string("participant_names");
+    tbl
+    .integer("trip_id")
+    .unsigned()
+    .references("id")
+    .inTable("trips")
+    .onDelete("CASCADE")
+    .onUpdate("CASCADE");
+
 
     tbl.timestamps(true, true);
   });
