@@ -4,13 +4,21 @@ const Trips = require('./tripsModel');
 const db = require('../data/dbConfig');
 
 // retrieve full list of trips
-router.get('/', (req, res) => {
-  Trips.find() 
-    .then(trips => {
-      res.status(200).json(trips);
-    })
-    .catch(err => res.send(err));
+router.get('/', async (req, res) => {
+  try {
+    const trips = await Trips.find();
+    res.status(200).json(trips);
+  } catch (error) {
+    res.status(500).json({ error: 'Uh-oh! There was an error retrieving your trips'})
+  }
 });
+// router.get('/', (req, res) => {
+//   Trips.find() 
+//     .then(trips => {
+//       res.status(200).json(trips);
+//     })
+//     .catch(err => res.send(err));
+// });
 
 // retrieve specific trip by id #
 router.get('/:id', async (req, res) => {
@@ -18,9 +26,10 @@ router.get('/:id', async (req, res) => {
     const trip = await Trips.findById(req.params.id);
 
     if (trip) {
+// brings in array of participants on trip
       const participants = await db('userTrips').where({ trips_id: trip.id })
       trip.participants = participants;
-      
+
       res.status(200).json(trip);
     } else {
       res.status(404).json({ message: 'Trip not found' });
@@ -33,6 +42,29 @@ router.get('/:id', async (req, res) => {
     });
   }
 });
+
+router.get('/complete', async (req, res) => {
+  try {
+    const tripComplete = await Trips.findById(req.params.complete);
+
+    if (tripComplete === true) {
+      // const participants = await db('userTrips').where({ trips_id: trip.id })
+      // trip.participants = participants;
+      
+      res.status(200).json(tripComplete);
+    } else {
+      res.status(404).json({ message: 'Trip is still active' });
+    }
+  } catch (error) {
+    // log error to database
+    console.log(error);
+    res.status(500).json({
+      message: 'Error retrieving your trip',
+    });
+  }
+});
+
+
 
 // bring in array of participants on trips
 

@@ -8,7 +8,7 @@ module.exports = {
 };
 
 function find() {
-  return db('expenses').select('name', 'date');
+  return db('expenses').select('expense_name', 'total_expense_price', 'primary_paid');
 }
 
 function findBy(filter) {
