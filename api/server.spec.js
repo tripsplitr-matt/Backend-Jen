@@ -1,3 +1,5 @@
+require('dotenv').config()
+
 const request = require('supertest');
 const server = require('./server');
 
@@ -8,7 +10,7 @@ describe("server.js", () => {
 
   describe("endpoints", () => {
     describe("GET /users", () => {
-      it("should return the list of games and HTTP status code 200", async () => {
+      it("should return the list of users and HTTP status code 200", async () => {
         const res = await request(server).get("/users");
         expect(res.status).toBe(200);
       });
@@ -18,14 +20,10 @@ describe("server.js", () => {
         expect(res.type).toBe('application/json');
       })
 
-      it('should return { api: "up" }', async() => {
-        const res = await request(server).get('/');
-        expect(res.body).toEqual({ api: "up" });
-      })
     });
 
     describe('POST /', () => {
-      it("should return the list of games and HTTP status code 200", async () => {
+      it("should return the list of users and HTTP status code 200", async () => {
         const res = await request(server).get("/users");
         expect(res.status).toBe(200);
       });
@@ -35,10 +33,6 @@ describe("server.js", () => {
         expect(res.type).toBe('application/json');
       })
 
-      it('should return { api: "up" }', async() => {
-        const res = await request(server).get('/');
-        expect(res.body).toEqual({ api: "up" });
-      })
     })
   });
 });
