@@ -11,7 +11,7 @@ module.exports = {
 };
 
 function find() {
-  return db('users').select('name', 'username', 'password');
+  return db('users').select('name', 'username', 'password', 'email');
 }
 
 function findBy(filter) {
