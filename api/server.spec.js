@@ -7,14 +7,14 @@ describe("server.js", () => {
   });
 
   describe("endpoints", () => {
-    describe("GET /games", () => {
+    describe("GET /users", () => {
       it("should return the list of games and HTTP status code 200", async () => {
-        const res = await request(server).get("/games");
+        const res = await request(server).get("/users");
         expect(res.status).toBe(200);
       });
 
       it('should return JSON', async () => {
-        const res = await request(server).get('/games');
+        const res = await request(server).get('/users');
         expect(res.type).toBe('application/json');
       })
 
@@ -26,12 +26,12 @@ describe("server.js", () => {
 
     describe('POST /', () => {
       it("should return the list of games and HTTP status code 200", async () => {
-        const res = await request(server).get("/games");
+        const res = await request(server).get("/users");
         expect(res.status).toBe(200);
       });
 
       it('should return JSON', async () => {
-        const res = await request(server).get('/games');
+        const res = await request(server).get('/users');
         expect(res.type).toBe('application/json');
       })
 

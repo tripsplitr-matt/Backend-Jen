@@ -39,7 +39,6 @@
   },
   "homepage": "https://github.com/tripsplitr-matt/Backend-Jen#readme",
   "jest": {
-		"testEnvironment": "node"
-	}
-
+    "testEnvironment": "node"
+  }
 }
