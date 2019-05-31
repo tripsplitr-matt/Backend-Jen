@@ -17,11 +17,15 @@
     "sqlite3": "^4.0.8"
   },
   "devDependencies": {
-    "knex-cleaner": "^1.1.4"
+    "cross": "^1.0.0",
+    "jest": "^24.8.0",
+    "knex-cleaner": "^1.1.4",
+    "supertest": "^4.0.2"
   },
   "scripts": {
     "server": "nodemon index.js",
-    "start": "node index.js"
+    "start": "node index.js",
+    "test": "cross-env DB_ENV=testing jest --watch --verbose"
   },
   "repository": {
     "type": "git",
@@ -33,5 +37,9 @@
   "bugs": {
     "url": "https://github.com/tripsplitr-matt/Backend-Jen/issues"
   },
-  "homepage": "https://github.com/tripsplitr-matt/Backend-Jen#readme"
+  "homepage": "https://github.com/tripsplitr-matt/Backend-Jen#readme",
+  "jest": {
+		"testEnvironment": "node"
+	}
+
 }
