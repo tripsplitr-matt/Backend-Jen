@@ -14,10 +14,10 @@ function find() {
     // "id",
     "name",
     "date",
-    "base_cost",
-    "complete",
-    "user_id",
-    "participants"
+    "base_cost"
+    // "complete",
+    // "user_id",
+    // "participants"
   );
 }
 
