@@ -10,7 +10,18 @@ module.exports = {
 };
 
 function find() {
-  return db("trips").select("name", "date", "base_cost");
+  return db("trips").select(
+    "id",
+    "name",
+    "date",
+    "base_cost",
+    "complete",
+    "img",
+    "user_id",
+    "created_at",
+    "updated_at",
+    "participants"
+  );
 }
 
 function findBy(filter) {
