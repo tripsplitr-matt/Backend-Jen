@@ -38,6 +38,6 @@ function remove(id) {
 function update(id, changes) {
   return db("users")
     .where({ id })
-    .update(changes)
-    .then(count => (count > 0 ? this.get(id) : null));
+    .update(changes);
+  // .then(count => (count > 0 ? this.get(id) : null));
 }
