@@ -16,10 +16,7 @@ function find() {
     "date",
     "base_cost",
     "complete",
-    "img",
     "user_id",
-    "created_at",
-    "updated_at",
     "participants"
   );
 }
