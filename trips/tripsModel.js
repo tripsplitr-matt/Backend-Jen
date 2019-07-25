@@ -11,13 +11,15 @@ module.exports = {
 
 function find() {
   return db("trips").select(
-    // "id",
+    "id",
     "name",
     "date",
     "base_cost",
-    // "complete",
-    "user_id"
-    // "participants"
+    "complete",
+    "user_id",
+    "img",
+    "created_at",
+    "updated_at"
   );
 }
 
