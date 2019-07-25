@@ -14,9 +14,9 @@ function find() {
     // "id",
     "name",
     "date",
-    "base_cost"
+    "base_cost",
     // "complete",
-    // "user_id",
+    "user_id"
     // "participants"
   );
 }
