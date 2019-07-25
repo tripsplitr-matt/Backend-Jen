@@ -37,7 +37,7 @@ function remove(id) {
 
 function update(id, changes) {
   return db("users")
-    .where("id", id)
+    .where({ id })
     .update(changes)
     .then(count => (count > 0 ? this.get(id) : null));
 }
