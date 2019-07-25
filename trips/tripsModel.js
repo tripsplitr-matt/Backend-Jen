@@ -10,7 +10,7 @@ module.exports = {
 };
 
 function find() {
-  return db("trips").select("trips");
+  return db("trips").select("name", "date", "base_cost");
 }
 
 function findBy(filter) {
